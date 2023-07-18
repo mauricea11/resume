@@ -1,0 +1,14 @@
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: palevioletred !important;
+}
+
+a:hover{
+    color: black !important;
+    text-decoration: none; 
+} 
+
+button{
+    border: solid palevioletred !important;
+}
