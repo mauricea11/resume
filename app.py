@@ -14,7 +14,7 @@ PROFILE_PICTURE = DIR / "assets/Headshot.jpeg"
 TITLE = "Maurice August Resume"
 ICON = "👋🏾"
 NAME = "Maurice August"
-DESCRIPTION = "Final year computer science student interested in backend software engineering"
+DESCRIPTION = "Final year computer science student interested in anything tech"
 SOCIAL = {
     "Linkedin": "https://www.linkedin.com/in/mauriceaugust/",
     "Github": "https://github.com/mauricea11/mauricea11/blob/main/README.md",
@@ -57,7 +57,7 @@ sl.subheader("📈 Experience & Qualifications")
 sl.write("""
     - 5 years of Object Oriented programming experience
     - 3 years of experience with financial service software
-    - 5 years of experience with Microsoft office, in particular Excel
+    - 5 years of experience with Microsoft Office, in particular Excel
     - Passion for inventing and figuring out unique ways to do tasks
 """
 )
