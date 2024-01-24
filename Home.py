@@ -28,9 +28,9 @@ sl.sidebar.markdown('''
 # Sections
 
 - [Home](#hello-world)
-- [Qualifications](#9da79b57)
-- [Skills](#f542e1d4)
-- [Experience](#2926de0f)
+- [Qualifications](#qualifications)
+- [Skills](#technical-skills)
+- [Experience](#professional-experience)
 ''', unsafe_allow_html=True)
 
 sl.title("Hello world!")
@@ -59,7 +59,7 @@ with col2:
     sl.write(DESCRIPTION)
     # sl.download_button(label= "📄 Download resume", data=PDF_BYTE, file_name=RESUME_PATH.name, mime="application/octet-stream")
     # sl.write("📧 mauriceaugust@outlook.com")
-    # sl.link_button("Github", "https://github.com/mauricea11?tab=repositories")
+    sl.link_button("Github", "https://github.com/mauricea11?tab=repositories")
 
 #Social
 
