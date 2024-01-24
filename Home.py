@@ -1,7 +1,6 @@
 from pathlib import Path
 import streamlit as sl
 from PIL import Image
-from streamlit import link_button
 
 # Path Settings
 
