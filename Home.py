@@ -59,7 +59,7 @@ with col2:
     sl.write(DESCRIPTION)
     # sl.download_button(label= "📄 Download resume", data=PDF_BYTE, file_name=RESUME_PATH.name, mime="application/octet-stream")
     # sl.write("📧 mauriceaugust@outlook.com")
-    sl.link_button("Github", "https://github.com/mauricea11?tab=repositories")
+    # sl.link_button("Github", "https://github.com/mauricea11?tab=repositories")
 
 #Social
 
