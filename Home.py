@@ -1,8 +1,10 @@
 from pathlib import Path
 import streamlit as sl
 from PIL import Image
+from streamlit import link_button
 
 # Path Settings
+
 
 DIR = Path(__file__).parent
 CSS = DIR / "styles" / "main.css"
@@ -60,6 +62,7 @@ with col2:
     # sl.download_button(label= "📄 Download resume", data=PDF_BYTE, file_name=RESUME_PATH.name, mime="application/octet-stream")
     # sl.write("📧 mauriceaugust@outlook.com")
     sl.link_button("Github", "https://github.com/mauricea11?tab=repositories")
+
 
 #Social
 
