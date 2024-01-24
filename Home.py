@@ -6,7 +6,7 @@ from PIL import Image
 
 DIR = Path(__file__).parent
 CSS = DIR / "styles" / "main.css"
-RESUME_PATH = DIR / "assets/Maurice August Resume copy.pdf"
+RESUME_PATH = DIR / "assets/Maurice August Resume sh.pdf"
 PROFILE_PICTURE = DIR / "assets/Headshot.jpeg"
 
 #Resume Details
@@ -14,15 +14,28 @@ PROFILE_PICTURE = DIR / "assets/Headshot.jpeg"
 TITLE = "Maurice August Resume"
 ICON = "👋🏾"
 NAME = "Maurice August"
-DESCRIPTION = "Final year computer science student interested in anything tech"
-SOCIAL = {
-    "Linkedin": "https://www.linkedin.com/in/mauriceaugust/",
-    "Github": "https://github.com/mauricea11/mauricea11/blob/main/README.md",
-    "Twitch": "ilikerice9"
-}
+DESCRIPTION = "Final year computer science student interested in using data science to make the world safer"
+# SOCIAL = {
+#     "Github": "https://github.com/mauricea11/mauricea11/blob/main/README.md",
+#     "Twitch": "ilikerice9"
+# }
 
 sl.set_page_config(page_title=TITLE, page_icon=ICON)
+
+
+
+sl.sidebar.markdown('''
+# Sections
+
+- [Home](#hello-world)
+- [Qualifications](#9da79b57)
+- [Skills](#f542e1d4)
+- [Experience](#2926de0f)
+''', unsafe_allow_html=True)
+
 sl.title("Hello world!")
+ 
+
 
 #Loading Files
 
@@ -39,21 +52,25 @@ col1, col2 = sl.columns(2, gap="small")
 with col1:
     sl.image(picture, width=230)
 
+sl.write("#")
+
 with col2:
     sl.title(NAME)
     sl.write(DESCRIPTION)
-    sl.download_button(label= "📄 Download resume", data=PDF_BYTE, file_name=RESUME_PATH.name, mime="application/octet-stream")
+    # sl.download_button(label= "📄 Download resume", data=PDF_BYTE, file_name=RESUME_PATH.name, mime="application/octet-stream")
     # sl.write("📧 mauriceaugust@outlook.com")
+    sl.link_button("Github", "https://github.com/mauricea11?tab=repositories")
 
-sl.write("#")
-cols = sl.columns(len(SOCIAL))
+#Social
 
-for i, (platform, link) in enumerate(SOCIAL.items()):
-    cols[i].write(f"[{platform}]({link})")
+# cols = sl.columns(len(SOCIAL))
+
+# for i, (platform, link) in enumerate(SOCIAL.items()):
+#     cols[i].write(f"[{platform}]({link})")
 
 #General Experience
 sl.write("#")
-sl.subheader("📈 Experience & Qualifications")
+sl.subheader("📈 Qualifications")
 sl.write("""
     - 5 years of Object Oriented programming experience
     - 3 years of experience with financial service software
@@ -66,15 +83,18 @@ sl.write("""
 sl.write("#")
 sl.subheader("🛠️ Technical Skills")
 sl.write(""" 
-    - Programming Languages: Python, Java, JavaScript(React, Node, Typescript)
-    - Databases(Postgres, MySQL)
-    - Microsoft Office
+    - Python (Pandas, Flask), Java, JavaScript, R, Swift
+    - Git/Github
+    - Tableau
+    - Postgres, MySQL
+    - Excel 
     - Unity
+    - Heroku
 """)
 
 #Experience
 sl.write("#")
-sl.subheader("🚧 Work History")
+sl.subheader("🧑🏽‍💼Professional Experience")
 sl.write("---")
 
 #Most recent job
@@ -101,6 +121,18 @@ sl.write("""
     - Built weekly full stack projects (Thursday – Friday) spanning various technologies like HTML, CSS, React, Node, and SQL
     - Engaged in stand-up meetings where each intern would give an update on daily exercise completion and challenges faced
     - Participated in lectures that explained full stack concepts before joining a pod of 3-5 interns to complete a daily challenge
+"""
+)
+
+sl.write("**CUNY Research Foundation & Office of Mayor Eric Adams | Data Analyst**"
+)
+sl.write("""
+    December 2021 - March 2022 
+""")
+sl.write("""
+    - Cleaned several thousand rows of governmental department data using the Excel data analysis feature and common String formulas in order to prevent inaccurate visualizations
+    - Created visualizations with Tableau and Excel that showed the highest spending category within each governmental department to prepare mayors new financial budget
+    - Used statistical principles such as correlation, regression analysis, and confidence intervals to assess which governmental department had the highest spending and why
 """
 )
 
