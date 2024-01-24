@@ -23,15 +23,13 @@ DESCRIPTION = "Final year computer science student interested in using data scie
 
 sl.set_page_config(page_title=TITLE, page_icon=ICON)
 
-
-
 sl.sidebar.markdown('''
 # Sections
 
 - [Home](#hello-world)
-- [Qualifications](#qualifications)
-- [Skills](#technical-skills)
-- [Experience](#professional-experience)
+- [Qualifications](#9da79b57)
+- [Skills](#f542e1d4)
+- [Experience](#2926de0f)
 ''', unsafe_allow_html=True)
 
 sl.title("Hello world!")
